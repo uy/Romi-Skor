@@ -1,32 +1,15 @@
 //
-//  OyuncuDuzenle.swift
+//  SkorVC.swift
 //  Romi Skor
 //
-//  Created by Utku Yeğen on 9.01.2018.
+//  Created by Utku Yeğen on 10.01.2018.
 //  Copyright © 2018 Utku Yeğen. All rights reserved.
 //
 
 import UIKit
 
-class OyuncuDuzenleVC: UIViewController {
-    
-    // MARK : Outlets
-    @IBOutlet weak var oyuncu1: UITextField!
-    @IBOutlet weak var oyuncu2: UITextField!
-    @IBOutlet weak var oyuncu3: UITextField!
-    @IBOutlet weak var oyuncu4: UITextField!
-    
-    // MARK : IB Actions
-    @IBAction func duzenle(_ sender: UIButton) {
-        RomiSkorAPI.sharedInstance.setOyuncuIsimleri(OyuncuIsimleri(oyuncu1: oyuncu1.text!, oyuncu2: oyuncu2.text!, oyuncu3: oyuncu3.text!, oyuncu4: oyuncu4.text!))
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func iptal(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    // MARK : Override Func.s
+class SkorVC: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,4 +23,3 @@ class OyuncuDuzenleVC: UIViewController {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: self.view.window)
     }
 }
-

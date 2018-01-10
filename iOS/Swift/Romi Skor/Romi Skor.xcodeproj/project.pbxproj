@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71750E0B20069DE00024A236 /* SkorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71750E0A20069DE00024A236 /* SkorVC.swift */; };
+		71750E0E20069FE30024A236 /* RomiSkorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71750E0D20069FE30024A236 /* RomiSkorAPI.swift */; };
 		7188803E2004218400DD3175 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7188803D2004218400DD3175 /* Extensions.swift */; };
 		71C7E6F12005575E00138422 /* OyuncuDuzenleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E6F02005575E00138422 /* OyuncuDuzenleVC.swift */; };
 		71C7E6F42005658B00138422 /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E6F32005658B00138422 /* RoundedCornerView.swift */; };
 		71C7E6F620056B2C00138422 /* CezaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E6F520056B2C00138422 /* CezaVC.swift */; };
 		71FAE375200413260072749C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE374200413260072749C /* AppDelegate.swift */; };
-		71FAE377200413260072749C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE376200413260072749C /* ViewController.swift */; };
+		71FAE377200413260072749C /* RomiSkorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FAE376200413260072749C /* RomiSkorVC.swift */; };
 		71FAE37A200413260072749C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71FAE378200413260072749C /* Main.storyboard */; };
 		71FAE37C200413260072749C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71FAE37B200413260072749C /* Assets.xcassets */; };
 		71FAE37F200413260072749C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71FAE37D200413260072749C /* LaunchScreen.storyboard */; };
@@ -21,13 +23,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71750E0A20069DE00024A236 /* SkorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkorVC.swift; sourceTree = "<group>"; };
+		71750E0D20069FE30024A236 /* RomiSkorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomiSkorAPI.swift; sourceTree = "<group>"; };
 		7188803D2004218400DD3175 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		71C7E6F02005575E00138422 /* OyuncuDuzenleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OyuncuDuzenleVC.swift; sourceTree = "<group>"; };
 		71C7E6F32005658B00138422 /* RoundedCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
 		71C7E6F520056B2C00138422 /* CezaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CezaVC.swift; sourceTree = "<group>"; };
 		71FAE371200413260072749C /* Romi Skor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Romi Skor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71FAE374200413260072749C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		71FAE376200413260072749C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		71FAE376200413260072749C /* RomiSkorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomiSkorVC.swift; sourceTree = "<group>"; };
 		71FAE379200413260072749C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71FAE37B200413260072749C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71FAE37E200413260072749C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,12 +51,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71750E0C20069FBA0024A236 /* CustObj.s & Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				71FAE388200414BF0072749C /* GameRowCell.swift */,
+				7188803D2004218400DD3175 /* Extensions.swift */,
+				71C7E6F32005658B00138422 /* RoundedCornerView.swift */,
+			);
+			path = "CustObj.s & Extensions";
+			sourceTree = "<group>";
+		};
 		71C7E6F22005578600138422 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				71FAE376200413260072749C /* RomiSkorVC.swift */,
 				71C7E6F02005575E00138422 /* OyuncuDuzenleVC.swift */,
-				71FAE376200413260072749C /* ViewController.swift */,
 				71C7E6F520056B2C00138422 /* CezaVC.swift */,
+				71750E0A20069DE00024A236 /* SkorVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -78,10 +93,9 @@
 			children = (
 				71FAE374200413260072749C /* AppDelegate.swift */,
 				71C7E6F22005578600138422 /* ViewControllers */,
-				71FAE388200414BF0072749C /* GameRowCell.swift */,
 				71FAE38A200417830072749C /* GameRow.swift */,
-				7188803D2004218400DD3175 /* Extensions.swift */,
-				71C7E6F32005658B00138422 /* RoundedCornerView.swift */,
+				71750E0D20069FE30024A236 /* RomiSkorAPI.swift */,
+				71750E0C20069FBA0024A236 /* CustObj.s & Extensions */,
 				71FAE378200413260072749C /* Main.storyboard */,
 				71FAE37B200413260072749C /* Assets.xcassets */,
 				71FAE37D200413260072749C /* LaunchScreen.storyboard */,
@@ -163,11 +177,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7188803E2004218400DD3175 /* Extensions.swift in Sources */,
-				71FAE377200413260072749C /* ViewController.swift in Sources */,
+				71FAE377200413260072749C /* RomiSkorVC.swift in Sources */,
 				71C7E6F12005575E00138422 /* OyuncuDuzenleVC.swift in Sources */,
+				71750E0B20069DE00024A236 /* SkorVC.swift in Sources */,
 				71C7E6F620056B2C00138422 /* CezaVC.swift in Sources */,
 				71FAE375200413260072749C /* AppDelegate.swift in Sources */,
 				71FAE38B200417830072749C /* GameRow.swift in Sources */,
+				71750E0E20069FE30024A236 /* RomiSkorAPI.swift in Sources */,
 				71FAE389200414BF0072749C /* GameRowCell.swift in Sources */,
 				71C7E6F42005658B00138422 /* RoundedCornerView.swift in Sources */,
 			);
