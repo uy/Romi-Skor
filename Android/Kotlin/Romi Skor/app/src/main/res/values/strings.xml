@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Romi Skor</string>
+
+    <string name="place_holder_game_name">Oyun Adı</string>
+    <string name="place_holder_oyuncu_adi_1">Oyuncu 1</string>
+    <string name="place_holder_oyuncu_adi_2">Oyuncu 2</string>
+    <string name="place_holder_oyuncu_adi_3">Oyuncu 3</string>
+    <string name="place_holder_oyuncu_adi_4">Oyuncu 4</string>
 </resources>
