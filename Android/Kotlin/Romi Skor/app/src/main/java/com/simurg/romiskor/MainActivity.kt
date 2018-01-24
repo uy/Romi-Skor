@@ -29,8 +29,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         if (savedInstanceState == null) {
-            gameList.adapter = RomiSkorListAdapter(applicationContext, this.oyunListesi,
-                    this.skorHolder)
+            gameList.adapter = RomiSkorListAdapter(applicationContext, this.skorHolder)
         }
     }
 }

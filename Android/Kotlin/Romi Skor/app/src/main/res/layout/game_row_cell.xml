@@ -13,9 +13,11 @@
         <TextView
             android:id="@+id/oyunAdi"
             android:layout_width="wrap_content"
-            android:layout_height="16dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:textColor="@color/color_label_text"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/place_holder_game_name" />
@@ -27,8 +29,9 @@
             android:layout_marginEnd="8dp"
             android:layout_marginTop="8dp"
             android:ems="10"
-            android:focusedByDefault="false"
             android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/color_label_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/oyunAdi" />
 
@@ -39,6 +42,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="14dp"
             android:text="@string/place_holder_oyuncu_adi_1"
+            android:textColor="@color/color_label_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/oyuncuPuan1" />
 
@@ -50,6 +54,8 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/color_label_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/oyuncuPuan1" />
 
@@ -60,6 +66,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="14dp"
             android:text="@string/place_holder_oyuncu_adi_2"
+            android:textColor="@color/color_label_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/oyuncuPuan2" />
 
@@ -71,6 +78,8 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/color_label_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/oyuncuPuan2" />
 
@@ -81,6 +90,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="14dp"
             android:text="@string/place_holder_oyuncu_adi_3"
+            android:textColor="@color/color_label_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/oyuncuPuan3" />
 
@@ -92,6 +102,8 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/color_label_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/oyuncuPuan3" />
 
@@ -102,6 +114,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="14dp"
             android:text="@string/place_holder_oyuncu_adi_4"
+            android:textColor="@color/color_label_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/oyuncuPuan4" />
 

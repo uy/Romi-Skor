@@ -5,17 +5,21 @@ package com.simurg.romiskor.skorApi
 */
 
 class SkorHolderMain(gameList: Array<String>) {
-    var arrGame = arrayListOf<SkorHolderItem>()
+    private var arrGame = arrayListOf<SkorHolderItem>()
 
     init {
         var i = 0
         for (gameItem in gameList) {
             i += 1
-            arrGame.add(SkorHolderItem(1))
+            arrGame.add(SkorHolderItem(1, gameItem))
         }
     }
 
     fun getRowData(i: Int): SkorHolderItem {
         return this.arrGame[i]
+    }
+
+    fun getRowCount(): Int {
+        return this.arrGame.size
     }
 }

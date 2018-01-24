@@ -4,15 +4,21 @@ package com.simurg.romiskor.skorApi
 * Created by uyegen on 18.01.2018.
 */
 
-class SkorHolderItem(i: Int) {
-    var index = 0
-    var oyuncuPuan1 = 0
-    var oyuncuPuan2 = 0
-    var oyuncuPuan3 = 0
-    var oyuncuPuan4 = 0
+class SkorHolderItem(i: Int, o: String) {
+    private var index = 0
+    private var oyunAdi = ""
+    private var oyuncuPuan1 = 0
+    private var oyuncuPuan2 = 0
+    private var oyuncuPuan3 = 0
+    private var oyuncuPuan4 = 0
 
     init {
         this.index = i
+        this.oyunAdi = o
+    }
+
+    fun getOyunAdi(): String {
+        return this.oyunAdi
     }
 
     fun setPuan(oyuncu: OyuncuIndex, puan: Int) {
