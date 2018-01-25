@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.EditText
 import android.widget.TextView
+import com.simurg.romiskor.customObjects.HKEditText
 import com.simurg.romiskor.skorApi.OyuncuIndex
 import com.simurg.romiskor.skorApi.SkorHolderMain
 
@@ -20,10 +20,17 @@ class RomiSkorListAdapter(context: Context, private var listData: SkorHolderMain
 
     private class ListRowHolder(row: View) {
         val oyunAdi: TextView = row.findViewById<TextView>(R.id.oyunAdi)
-        val oyuncuPuan1: EditText = row.findViewById<EditText>(R.id.oyuncuPuan1)
-        val oyuncuPuan2: EditText = row.findViewById<EditText>(R.id.oyuncuPuan2)!!
-        val oyuncuPuan3: EditText = row.findViewById<EditText>(R.id.oyuncuPuan3)!!
-        val oyuncuPuan4: EditText = row.findViewById<EditText>(R.id.oyuncuPuan4)!!
+        val oyuncuPuan1: HKEditText = row.findViewById<HKEditText>(R.id.oyuncuPuan1)
+        val oyuncuPuan2: HKEditText = row.findViewById<HKEditText>(R.id.oyuncuPuan2)
+        val oyuncuPuan3: HKEditText = row.findViewById<HKEditText>(R.id.oyuncuPuan3)
+        val oyuncuPuan4: HKEditText = row.findViewById<HKEditText>(R.id.oyuncuPuan4)
+
+        init {
+            oyuncuPuan1.tag = OyuncuIndex.O1
+            oyuncuPuan2.tag = OyuncuIndex.O2
+            oyuncuPuan3.tag = OyuncuIndex.O3
+            oyuncuPuan4.tag = OyuncuIndex.O4
+        }
     }
 
     @SuppressLint("ViewHolder", "InflateParams")
@@ -48,10 +55,9 @@ class RomiSkorListAdapter(context: Context, private var listData: SkorHolderMain
         viewHolder.oyuncuPuan1.setOnFocusChangeListener { _, focus ->
             if (!focus) {
                 ifPossibleSetText(position, OyuncuIndex.O1, viewHolder.oyuncuPuan1)
-//            } else {
-//                ifPossibleClearText(viewHolder.oyuncuPuan1)
             }
         }
+        viewHolder.oyuncuPuan1.setRouteParameter(position, OyuncuIndex.O4, this::ifPossibleSetText)
 
         // 2. oyuncu işlemleri
         viewHolder.oyuncuPuan2.setText(this.listData.getRowData(position)
@@ -59,8 +65,6 @@ class RomiSkorListAdapter(context: Context, private var listData: SkorHolderMain
         viewHolder.oyuncuPuan2.setOnFocusChangeListener { _, focus ->
             if (!focus) {
                 ifPossibleSetText(position, OyuncuIndex.O2, viewHolder.oyuncuPuan2)
-//            } else {
-//                ifPossibleClearText(viewHolder.oyuncuPuan2)
             }
         }
 
@@ -70,8 +74,6 @@ class RomiSkorListAdapter(context: Context, private var listData: SkorHolderMain
         viewHolder.oyuncuPuan3.setOnFocusChangeListener { _, focus ->
             if (!focus) {
                 ifPossibleSetText(position, OyuncuIndex.O3, viewHolder.oyuncuPuan3)
-//            } else {
-//                ifPossibleClearText(viewHolder.oyuncuPuan3)
             }
         }
 
@@ -81,8 +83,6 @@ class RomiSkorListAdapter(context: Context, private var listData: SkorHolderMain
         viewHolder.oyuncuPuan4.setOnFocusChangeListener { _, focus ->
             if (!focus) {
                 ifPossibleSetText(position, OyuncuIndex.O4, viewHolder.oyuncuPuan4)
-//            } else {
-//                ifPossibleClearText(viewHolder.oyuncuPuan4)
             }
         }
 
@@ -101,13 +101,7 @@ class RomiSkorListAdapter(context: Context, private var listData: SkorHolderMain
         return this.listData.getRowCount()
     }
 
-//    private fun ifPossibleClearText(obj: EditText) {
-////        if (obj.text.toString() == "0") {
-////            obj.setText("")
-////        }
-//    }
-
-    private fun ifPossibleSetText(position: Int, oyuncuIndex: OyuncuIndex, obj: EditText) {
+    private fun ifPossibleSetText(position: Int, oyuncuIndex: OyuncuIndex, obj: HKEditText) {
         if (obj.text.toString() == "") {
             this.listData.getRowData(position).setPuan(oyuncuIndex, 0)
         } else {

@@ -22,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/place_holder_game_name" />
 
-        <EditText
+        <com.simurg.romiskor.customObjects.HKEditText
             android:id="@+id/oyuncuPuan1"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/oyuncuPuan1" />
 
-        <EditText
+        <com.simurg.romiskor.customObjects.HKEditText
             android:id="@+id/oyuncuPuan2"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/oyuncuPuan2" />
 
-        <EditText
+        <com.simurg.romiskor.customObjects.HKEditText
             android:id="@+id/oyuncuPuan3"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/oyuncuPuan3" />
 
-        <EditText
+        <com.simurg.romiskor.customObjects.HKEditText
             android:id="@+id/oyuncuPuan4"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
