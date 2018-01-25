@@ -16,7 +16,6 @@ class HKEditText: EditText {
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int): super(context, attrs, defStyleAttr)
 
     private var position = 0
-    private lateinit var oyuncuIndex: OyuncuIndex
     private lateinit var callback: (position: Int, oyuncuIndex: OyuncuIndex, obj: HKEditText) -> Unit
 
     override fun onKeyPreIme(keyCode: Int, event: KeyEvent?): Boolean {
@@ -28,14 +27,13 @@ class HKEditText: EditText {
                 || keyCode == KeyEvent.KEYCODE_DEL) {
             // ok
         } else {
-            callback(this.position, this.oyuncuIndex, this)
+            callback(this.position, this.tag as OyuncuIndex, this)
         }
         return super.onKeyPreIme(keyCode, event)
     }
 
-    fun setRouteParameter(position: Int, oyuncuIndex: OyuncuIndex, l: (position: Int, oyuncuIndex: OyuncuIndex, obj: HKEditText) -> Unit) {
+    fun setRouteParameter(position: Int, l: (position: Int, oyuncuIndex: OyuncuIndex, obj: HKEditText) -> Unit) {
         this.position = position
-        this.oyuncuIndex = oyuncuIndex
         this.callback = l
     }
 }

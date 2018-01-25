@@ -57,7 +57,6 @@ class RomiSkorListAdapter(context: Context, private var listData: SkorHolderMain
                 ifPossibleSetText(position, OyuncuIndex.O1, viewHolder.oyuncuPuan1)
             }
         }
-        viewHolder.oyuncuPuan1.setRouteParameter(position, OyuncuIndex.O4, this::ifPossibleSetText)
 
         // 2. oyuncu işlemleri
         viewHolder.oyuncuPuan2.setText(this.listData.getRowData(position)
@@ -85,6 +84,12 @@ class RomiSkorListAdapter(context: Context, private var listData: SkorHolderMain
                 ifPossibleSetText(position, OyuncuIndex.O4, viewHolder.oyuncuPuan4)
             }
         }
+
+        // klavye kapanirken girilmis olan degerlerin tutulmasini saglayacak lambda tanimlamasi
+        viewHolder.oyuncuPuan1.setRouteParameter(position, this::ifPossibleSetText)
+        viewHolder.oyuncuPuan2.setRouteParameter(position, this::ifPossibleSetText)
+        viewHolder.oyuncuPuan3.setRouteParameter(position, this::ifPossibleSetText)
+        viewHolder.oyuncuPuan4.setRouteParameter(position, this::ifPossibleSetText)
 
         return  view
     }
