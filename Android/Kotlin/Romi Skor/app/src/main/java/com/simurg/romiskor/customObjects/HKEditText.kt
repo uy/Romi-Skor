@@ -27,7 +27,9 @@ class HKEditText: EditText {
                 || keyCode == KeyEvent.KEYCODE_DEL) {
             // ok
         } else {
-            callback(this.position, this.tag as OyuncuIndex, this)
+            if (this.position != 0) {
+                callback(this.position, this.tag as OyuncuIndex, this)
+            }
         }
         return super.onKeyPreIme(keyCode, event)
     }

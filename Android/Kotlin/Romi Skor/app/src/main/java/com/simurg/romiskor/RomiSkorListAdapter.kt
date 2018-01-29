@@ -2,6 +2,7 @@ package com.simurg.romiskor
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -49,39 +50,48 @@ class RomiSkorListAdapter(context: Context, private var listData: SkorHolderMain
 
         viewHolder.oyunAdi.text = this.listData.getRowData(position).getOyunAdi()
 
-        // 1. oyuncu işlemleri
+
+        // puanlar toplanir
         viewHolder.oyuncuPuan1.setText(this.listData.getRowData(position)
                 .getPuan(OyuncuIndex.O1).toString())
+        viewHolder.oyuncuPuan2.setText(this.listData.getRowData(position)
+                .getPuan(OyuncuIndex.O2).toString())
+        viewHolder.oyuncuPuan3.setText(this.listData.getRowData(position)
+                .getPuan(OyuncuIndex.O3).toString())
+        viewHolder.oyuncuPuan4.setText(this.listData.getRowData(position)
+                .getPuan(OyuncuIndex.O4).toString())
+
+        // 1focusChangeListener'lar atanir
         viewHolder.oyuncuPuan1.setOnFocusChangeListener { _, focus ->
             if (!focus) {
                 ifPossibleSetText(position, OyuncuIndex.O1, viewHolder.oyuncuPuan1)
+                Log.e("RomiSkorListAdapter", "Oyuncu 1 - FALSE")
+            } else {
+                Log.e("RomiSkorListAdapter", "Oyuncu 1 - TRUE")
             }
         }
-
-        // 2. oyuncu işlemleri
-        viewHolder.oyuncuPuan2.setText(this.listData.getRowData(position)
-                .getPuan(OyuncuIndex.O2).toString())
         viewHolder.oyuncuPuan2.setOnFocusChangeListener { _, focus ->
             if (!focus) {
                 ifPossibleSetText(position, OyuncuIndex.O2, viewHolder.oyuncuPuan2)
+                Log.e("RomiSkorListAdapter", "Oyuncu 2 - FALSE")
+            } else {
+                Log.e("RomiSkorListAdapter", "Oyuncu 2 - TRUE")
             }
         }
-
-        // 3. oyuncu işlemleri
-        viewHolder.oyuncuPuan3.setText(this.listData.getRowData(position)
-                .getPuan(OyuncuIndex.O3).toString())
         viewHolder.oyuncuPuan3.setOnFocusChangeListener { _, focus ->
             if (!focus) {
                 ifPossibleSetText(position, OyuncuIndex.O3, viewHolder.oyuncuPuan3)
+                Log.e("RomiSkorListAdapter", "Oyuncu 3 - FALSE")
+            } else {
+                Log.e("RomiSkorListAdapter", "Oyuncu 3 - TRUE")
             }
         }
-
-        // 4. oyuncu işlemleri
-        viewHolder.oyuncuPuan4.setText(this.listData.getRowData(position)
-                .getPuan(OyuncuIndex.O4).toString())
         viewHolder.oyuncuPuan4.setOnFocusChangeListener { _, focus ->
             if (!focus) {
                 ifPossibleSetText(position, OyuncuIndex.O4, viewHolder.oyuncuPuan4)
+                Log.e("RomiSkorListAdapter", "Oyuncu 4 - FALSE")
+            } else {
+                Log.e("RomiSkorListAdapter", "Oyuncu 4 - TRUE")
             }
         }
 
