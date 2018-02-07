@@ -30,10 +30,10 @@
             android:layout_marginTop="8dp"
             android:allowUndo="false"
             android:ems="10"
-            android:inputType="numberSigned"
+            android:inputType="number"
             android:selectAllOnFocus="true"
             android:textColor="@color/color_label_text"
-            android:textIsSelectable="true"
+            android:textIsSelectable="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/oyunAdi" />
 
@@ -56,10 +56,10 @@
             android:layout_marginTop="8dp"
             android:allowUndo="false"
             android:ems="10"
-            android:inputType="numberSigned"
+            android:inputType="number"
             android:selectAllOnFocus="true"
             android:textColor="@color/color_label_text"
-            android:textIsSelectable="true"
+            android:textIsSelectable="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/oyuncuPuan1" />
 
@@ -82,10 +82,10 @@
             android:layout_marginTop="8dp"
             android:allowUndo="false"
             android:ems="10"
-            android:inputType="numberSigned"
+            android:inputType="number"
             android:selectAllOnFocus="true"
             android:textColor="@color/color_label_text"
-            android:textIsSelectable="true"
+            android:textIsSelectable="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/oyuncuPuan2" />
 
@@ -108,10 +108,10 @@
             android:layout_marginTop="8dp"
             android:allowUndo="false"
             android:ems="10"
-            android:inputType="numberSigned"
+            android:inputType="number"
             android:selectAllOnFocus="true"
             android:textColor="@color/color_label_text"
-            android:textIsSelectable="true"
+            android:textIsSelectable="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/oyuncuPuan3" />
 
